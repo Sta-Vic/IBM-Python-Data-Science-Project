@@ -5,8 +5,8 @@
 **
 Stock valuation is driven by a complex interplay of fundamental earnings growth and market psychology. In this project, completed as part of the IBM Python Project for Data Science certification, I developed a Python-based analytical workflow to extract, clean, and visualize historical stock prices against quarterly corporate revenue for Tesla (TSLA) and GameStop (GME).
 
-Technical Workflow & Tools:
-
+**Technical Workflow & Tools:
+**
 - Financial API Integration (yfinance): Automated the retrieval of daily historical trading records from IPO to present.
 
 - HTML Web Scraping (requests, BeautifulSoup): Extracted unstructured quarterly revenue tables directly from web sources.
