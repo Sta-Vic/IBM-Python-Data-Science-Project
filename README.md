@@ -1,20 +1,22 @@
 # IBM-Python-Data-Science-Project
-Analyzing Historical Stock/Revenue Data and Building a Dashboard (Tesla &amp; GameStop)
+📊 Financial Data Science Case Study: Fundamental Growth (Tesla) vs. Market Sentiment Short Squeeze (GameStop)
 
-**Hello everyone!
+**Overview:
 **
-I have completed the final project for the IBM Python Project for Data Science course: Analyzing Historical Stock/Revenue Data and Building a Dashboard.
+Stock valuation is driven by a complex interplay of fundamental earnings growth and market psychology. In this project, completed as part of the IBM Python Project for Data Science certification, I developed a Python-based analytical workflow to extract, clean, and visualize historical stock prices against quarterly corporate revenue for Tesla (TSLA) and GameStop (GME).
 
-Stepping into the role of a Data Analyst at an investment firm, I built an end-to-end Python pipeline in Jupyter Notebook to compare fundamental business performance against market stock valuation for Tesla (TSLA) and GameStop (GME):
+Technical Workflow & Tools:
 
-API Market Data Extraction (yfinance): Extracted full historical share price datasets (period="max") for both Tesla and GameStop, resetting DataFrame indices for time-series alignment.
+- Financial API Integration (yfinance): Automated the retrieval of daily historical trading records from IPO to present.
 
-Financial Web Scraping (requests & BeautifulSoup): Parsed HTML quarterly revenue tables, isolated target <tbody> elements, and cleaned currency formatting ($ and commas) and null records using Pandas regular expressions.
+- HTML Web Scraping (requests, BeautifulSoup): Extracted unstructured quarterly revenue tables directly from web sources.
 
-Comparative Dashboard Visualization (Matplotlib): Plotted dual time-series dashboards via make_graph to evaluate revenue trends alongside share price trajectories.
+- Data Wrangling (Pandas): Transformed raw text strings into clean numerical series using regex pattern matching (.str.replace(r',|\$', "", regex=True)), handled missing values, and standardized datetime indices.
 
-Key Analytical Insight: The visualizations clearly contrast Tesla’s fundamental growth (where share price surged in tandem with scaling quarterly revenue between 2018 and 2021) against GameStop’s 2021 short-squeeze anomaly (where retail market sentiment drove an extreme price spike despite declining seasonal revenue).
+- Time-Series Visualization (Matplotlib): Generated synchronized dual-axis subplots comparing share price ($US) and quarterly revenue ($US Millions).
 
-GitHub Project Notebook: https://github.com/Sta-Vic/IBM-Python-Data-Science-Project
+**Executive Findings:
+**
+- Tesla (TSLA): Demonstrates a classic fundamental growth trajectory—between 2018 and 2021, quarterly revenue scaled past $10B, driving a parallel exponential rise in share price and penalizing short sellers.
 
-I would greatly appreciate your peer review and feedback, and I am happy to review your submissions in return. Thank you!
+- GameStop (GME): Illustrates a market-sentiment anomaly—while quarterly revenues followed a cyclical holiday pattern with a gradual post-2018 decline, the stock experienced an unprecedented vertical spike in early 2021 driven by retail investors (the WallStreetBets short squeeze), completely decoupled from immediate earnings.
